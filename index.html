@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title>
+            My Family Book
+        </title>
+        <style>
+            body{
+                text-align: center;
+                background-color: burlywood;
+            }
+            
+            #btn1{
+                background-color: chartreuse;
+            }
+
+            #IMAGE1{
+                height : 350px;
+                width :  200px;
+            }
+        </style>
+    </head>
+    <body>
+    <h1> My Family Book </h1>
+
+    <img class="image1" id="IMAGE1" src="https://lowndeslibarchives.files.wordpress.com/2012/12/me-and-my-family-tree_book-cover.jpg?w=300">
+    
+
+    <h3 id="member_type">Welcome</h3>
+
+    <h4 id="member_name">click below 👇🏻</h4>
+
+    <input type="button" id="btn1" onclick="nextslide()" Value="Next"></input>
+    
+
+    <script>
+        var member_name1 = ["Thank you! ", "Click the button bellow", "Click the button bellow", "Click the button bellow once more", "Avinassh", "Monica", "Monica", "Tejash", "Aditya", "Rajkishore", "Ruchi", "Preymrani", "Shmsundar"];
+        var member_type1 = ["Thakk you!", "Lets Get Started", "Let's Get Started", "Click the button bellow once more:", "This is my Dad name:", "This is my mom name:", "This is my mom name:", "This is me name", "This is my brother name:", "This is my dad's brother name:", "This is my dad's brother's wife name:", "This is my GrandMother name:", "This is my GrandFather name:",];
+        var member_img = ["Thakk you!", "bigstock-Man-Hand-Writing-Lets-Get-Star-118820960", "bigstock-Man-Hand-Writing-Lets-Get-Star-118820960", "Paa.jpeg", "Paa.jpeg", "Mom.jpeg", "Tejash.jpeg", "Cousinbrother.jpeg", "BIGPAPA.jpeg", "BIGMAMA", "Dadiiiiiii.jpeg", "Dadaaaaaaa.jpeg",];
+        
+        var i = 0;
+        function nextslide() { 
+ 
+        if(i == 12)
+        {
+          i=0;
+        }
+   
+        document.getElementById("IMAGE1").src = member_img[i];
+        i++;
+
+        document.getElementById("member_type").innerHTML = member_type1[i];
+
+        document.getElementById("member_name").innerHTML = member_name1[i];
+ 
+        }
+    </script>
+
+    </body>
+</html>
